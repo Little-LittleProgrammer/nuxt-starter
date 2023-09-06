@@ -26,7 +26,7 @@
                         <a-form-item name="password">
                             <a-input v-model:value="data.formData.password" size="large" :type="data.inputType" placeholder="请输入密码">
                                 <template #prefix>
-                                    <q-antd-icon type="LockOutlined"></q-antd-icon>  
+                                    <q-antd-icon type="LockOutlined"></q-antd-icon>
                                 </template>
                                 <template #suffix>
                                     <div class="eye" @click="change_input_type">
@@ -92,7 +92,8 @@ import { reactive } from 'vue';
 definePageMeta({
     layout: 'login'
 });
-const globalStore = useGlobalStore()
+const globalStore = useGlobalStore();
+const router = useRouter();
 const data = reactive({
     imageData: {
         visible: false
@@ -115,7 +116,7 @@ const data = reactive({
     sectionOneList: [
         {src: new URL('../../assets/image/reason_one.png', import.meta.url), title: '海量用户规模', desc: '七猫免费小说累计服务用户3.5亿，月活用户5000万，位列免费阅读行业第一梯队'},
         {src: new URL('../../assets/image/reason_two.png', import.meta.url), title: '多样化广告资源', desc: '多种广告资源位、多样广告场景，助力广告效果'},
-        {src:  new URL('../../assets/image/reason_three.png', import.meta.url), title: '数据透明，多维分析', desc: '全链路数据透明，出价、转化一目了然'}
+        {src: new URL('../../assets/image/reason_three.png', import.meta.url), title: '数据透明，多维分析', desc: '全链路数据透明，出价、转化一目了然'}
     ],
     sectionTwoList: [
         {src: new URL('../../assets/image/cooperate_step_communicate.png', import.meta.url), title: '商务合作'},
@@ -133,16 +134,16 @@ const data = reactive({
 });
 
 function open_verification() {
-    globalStore.pageLoading = true
+    globalStore.pageLoading = true;
 }
 
-watch(()=> globalStore.pageLoading,(val) => {
+watch(() => globalStore.pageLoading, (val) => {
     if (val) {
         setTimeout(() => {
-            globalStore.pageLoading=false
-        }, 2000)
+            globalStore.pageLoading = false;
+        }, 2000);
     }
-})
+});
 
 function cancel_verification() {}
 
@@ -150,7 +151,11 @@ function change_input_type() {
     data.inputType = data.inputType == 'password' ? '' : 'password';
 }
 
-function jump_page() {}
+function jump_page(page: string) {
+    router.push({
+        path: `/user/${page}`
+    });
+}
 
 </script>
 <style lang='scss' scoped>

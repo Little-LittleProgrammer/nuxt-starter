@@ -8,38 +8,38 @@
                         <p @click="jump_to_sub_page">
                             业务规范
                         </p>
-                    </div> 
+                    </div>
                 </div>
                 <slot></slot>
             </div>
         </a-config-provider>
     </q-loading>
   </template>
-  
+
 <script setup lang="ts">
-import { reactive } from "#imports";
+import { reactive } from '#imports';
 import zhCN from 'ant-design-vue/es/locale/zh_CN';
-const appConfig = useRuntimeConfig()
-const router = useRouter()
-const globalStore = useGlobalStore()
+const appConfig = useRuntimeConfig();
+const router = useRouter();
+const globalStore = useGlobalStore();
 const theme = reactive({
     algorithm: appConfig.public.globalThemeConfig.algorithm,
     token: appConfig.public.globalThemeConfig.token
-})
+});
 function jump_to_main_page() {
     router.push({
         path: '/user/login'
-    })
+    });
 }
 
 function jump_to_sub_page() {
     router.push({
         path: '/sys/business-standard-no-login'
-    })
+    });
 }
 
 </script>
-  
+
 <style lang="scss" scoped>
 .login-layout-container{
     height: calc(100vh);
