@@ -10,6 +10,7 @@
                         <nuxt-link class="button" to="/user/login">1</nuxt-link>
                         <nuxt-link class="button" to="/user/register">2</nuxt-link>
                         <nuxt-link class="button" to="/sys/business-standard-no-login">3</nuxt-link>
+                        <nuxt-link class="button" to="/">4</nuxt-link>
                         <a-button @click="changeTheme('light')">
                         light
                         </a-button>

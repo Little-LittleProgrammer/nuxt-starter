@@ -57,3 +57,4 @@ cache
 .nuxt
 .nitro
 .cache
+public/css/*
