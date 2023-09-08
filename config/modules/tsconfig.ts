@@ -3,7 +3,7 @@ import { INuxtConfig } from './types';
 export const tsConfig:INuxtConfig = {
     typescript: {
         tsConfig: {
-            include: ['node_modules/@q-front-npm/types/**/*.d.ts']
+            include: ['node_modules/@pixiu/types/**/*.d.ts']
         }
     }
 };
