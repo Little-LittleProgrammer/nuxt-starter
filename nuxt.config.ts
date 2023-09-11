@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import {vite_utils_wrapper_env} from '@pixiu-configs/vite'
+import {vite_utils_wrapper_env} from '@quantum-design-configs/vite'
 import { get_modules_config } from './config/modules'
 import { project_config } from './config/project-setting';
-import { js_utils_deep_merge } from '@pixiu/utils';
+import { js_utils_deep_merge } from '@quantum-design/utils';
 export default defineNuxtConfig((() => {
     const viteEnv = vite_utils_wrapper_env(process.env);
     const _projectConfig = project_config(viteEnv)

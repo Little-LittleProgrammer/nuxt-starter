@@ -1,4 +1,4 @@
-import { ViteEnv } from '@pixiu-configs/vite';
+import { ViteEnv } from '@quantum-design-configs/vite';
 import { INuxtConfig } from './types';
 
 export function pwa_module(env: ViteEnv):INuxtConfig {
