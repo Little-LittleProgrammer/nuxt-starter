@@ -14,10 +14,10 @@ const globalStore = useGlobalStore()
 </script>
 
 <template>
-  <q-loading :loading="true">
+  <div>
     <p>data: {{ data }}</p>
     <p>Current route: {{ route.path }}</p>
     <p>globalStore: {{ globalStore.systemName }}</p>
     <a href="https://nuxt.com/docs/getting-started/routing" target="_blank">Learn more about Nuxt Routing</a>
-  </q-loading>
+  </div>
 </template>

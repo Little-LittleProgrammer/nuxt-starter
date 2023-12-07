@@ -1,4 +1,4 @@
-import type { INuxtConfig } from './types';
+import { INuxtConfig } from './types';
 
 export const devtools:INuxtConfig = {
     devtools: {
