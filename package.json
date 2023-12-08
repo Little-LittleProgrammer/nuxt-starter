@@ -12,7 +12,8 @@
     "gen:css": "esno scripts/gen-antd-style.ts"
   },
   "devDependencies": {
-    "@ant-design-vue/nuxt": "^1.1.1",
+    "@sentry/vue": "^7.66.0",
+    "@ant-design-vue/nuxt": "^1.2.0",
     "@nuxt/devtools": "latest",
     "@quantum-design-configs/eslint": "^1.0.0",
     "@quantum-design-configs/vite": "^1.0.0",
@@ -22,20 +23,17 @@
     "ant-design-vue": "4.0.1",
     "cross-env": "^7.0.3",
     "esno": "^0.17.0",
-    "fs-extra": "^10.0.0",
     "npm-run-all": "^4.1.5",
-    "nuxt": "^3.7.0",
-    "rollup": "3.28.1",
+    "nuxt": "^3.8.2",
     "sass": "1.66.1",
     "vue": "3.3.4"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.4.11",
+    "@pinia/nuxt": "^0.5.1",
     "@quantum-design/shared": "^1.0.0",
     "@quantum-design/utils": "^1.0.0",
     "@quantum-design/vue3-antd-pc-ui-nuxt": "^1.0.0",
     "@quantum-design/vue3-pc-ui-nuxt": "^1.0.0",
-    "@sentry/vue": "^7.66.0",
     "pinia": "^2.1.6"
   }
 }
